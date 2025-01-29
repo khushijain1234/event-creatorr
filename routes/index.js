@@ -3,6 +3,8 @@ import { Router } from "express";
 
 import { MONTHS } from "../config/index.js";
 import { test_routes } from "./test-routes.js";
+// import { router } from "./eventRoutes.js";
+// import eventRoutes from "./eventRoutes.js"
 
 // for multer (if required)
 const directory =
@@ -18,4 +20,4 @@ const fileUpload = multer({
 
 export const server_routes = Router();
 
-server_routes.use(test_routes);
+// server_routes.use(eventRoutes);

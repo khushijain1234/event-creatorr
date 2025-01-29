@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "67992cac9685ff48cbf18ad3"
+  },
+  "eventName": "Dance Event",
+  "date": {
+    "$date": "2025-01-03T00:00:00.000Z"
+  },
+  "totalSeats": 21,
+  "bookedSeats": 16,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6799ab61d481ec751bed400b"
+  },
+  "eventName": "Meet Yourself Conference",
+  "date": {
+    "$date": "2025-03-01T00:00:00.000Z"
+  },
+  "totalSeats": 35,
+  "bookedSeats": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6799abbad481ec751bed400d"
+  },
+  "eventName": "Coldplay",
+  "date": {
+    "$date": "2025-01-26T00:00:00.000Z"
+  },
+  "totalSeats": 100000,
+  "bookedSeats": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6799b6393620d9fb1a499f71"
+  },
+  "eventName": "Kumbh Mela",
+  "date": {
+    "$date": "2025-02-07T00:00:00.000Z"
+  },
+  "totalSeats": 200,
+  "bookedSeats": 0,
+  "__v": 0
+}]

@@ -1,6 +1,8 @@
 {
     "type": "module",
     "scripts": {
+        
+        
         "start": "dotenvx run -f .env.production -- node ./bin/index.js",
         "dev": "dotenvx run -f .env.local -- nodemon ./bin/index.js",
         "test": "echo '${npm_config_tablename}$'",
@@ -21,6 +23,8 @@
         "multer": "1.4.5-lts.1",
         "mysql-migrations": "^1.0.7",
         "mysql2": "^3.11.4",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
         "short-unique-id": "^5.2.0"
     },
     "devDependencies": {

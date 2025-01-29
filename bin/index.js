@@ -1,9 +1,11 @@
 import cors from "cors";
 import "dotenv/config";
 import Express from "express";
+import mongoose from "mongoose";
 
 import { SERVER_PORT } from "../config/index.js";
 import { server_routes } from "../routes/index.js";
+import   router  from "../routes/eventRoutes.js";
 
 const server = Express();
 
@@ -14,7 +16,7 @@ server.use(cors());
 server.use(Express.json({ limit: "100mb" }));
 
 // routes (Global Routes)
-server.use("/api", server_routes);
+server.use("/api", router);
 
 server.use("*", async (req, res, next) => {
     return res.status(404).json({
@@ -22,10 +24,20 @@ server.use("*", async (req, res, next) => {
         message: "Route not found",
     });
 });
+const PORT=process.env.SERVER_PORT;
 
-server.listen(SERVER_PORT, () => {
+mongoose.connect(process.env.MONGO_URL,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(() => {
+    console.log("DB Connection successful");
+}).catch((err)=>{
+    console.log(err.message);
+});
+
+server.listen(PORT, () => {
     console.log(`
-    Server Started on http://localhost:${SERVER_PORT}
+    Server Started on http://localhost:${PORT}
 
     ---------------------------------------------------------------------------------------------
 
